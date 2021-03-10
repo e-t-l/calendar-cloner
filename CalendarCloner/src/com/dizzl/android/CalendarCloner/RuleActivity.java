@@ -33,6 +33,7 @@ public class RuleActivity extends PreferenceActivity {
 	static final String mOn = ClonerApp.translate(R.string.rule_clone_self_attendee_status_reverse_on_summary);
 	static final String mOff = ClonerApp.translate(R.string.rule_clone_self_attendee_status_reverse_off_summary);
 	static final String[] mSyncPeriodBeforeNames = new String[] {
+			ClonerApp.translate(R.string.msg_n_days_back, new String[] { "0" }),
 			ClonerApp.translate(R.string.msg_n_day_back, new String[] { "1" }),
 			ClonerApp.translate(R.string.msg_n_days_back, new String[] { "3" }),
 			ClonerApp.translate(R.string.msg_n_week_back, new String[] { "1" }),
@@ -41,8 +42,10 @@ public class RuleActivity extends PreferenceActivity {
 			ClonerApp.translate(R.string.msg_n_months_back, new String[] { "3" }),
 			ClonerApp.translate(R.string.msg_n_year_back, new String[] { "1" }),
 			ClonerApp.translate(R.string.msg_n_years_back, new String[] { "2" }),
-			ClonerApp.translate(R.string.msg_n_years_back, new String[] { "5" }), ClonerApp.translate(R.string.msg_all) };
+			ClonerApp.translate(R.string.msg_n_years_back, new String[] { "5" }), 
+			ClonerApp.translate(R.string.msg_all) };
 	static final String[] mSyncPeriodAfterNames = new String[] {
+			ClonerApp.translate(R.string.msg_n_days_forward, new String[] { "0" }),
 			ClonerApp.translate(R.string.msg_n_day_forward, new String[] { "1" }),
 			ClonerApp.translate(R.string.msg_n_days_forward, new String[] { "3" }),
 			ClonerApp.translate(R.string.msg_n_week_forward, new String[] { "1" }),
