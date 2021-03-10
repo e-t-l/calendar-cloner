@@ -1,3 +1,7 @@
+Since the original project is abandoned, this is my fork where I'm making small tweaks and upgrades to suit my personal needs, and to share with anyone else who might benefit from them. As you may have noticed, this is the first and only repo on my github; I'm slowly teaching myself to code, and this is the first app I've actively edited. The original dev's ReadMe is below for posterity.
+
+---
+
 This repo contains the source code of Calendar Cloner and Calendar Cloner FREE, both Android apps that can be found in Google Play.
 
 Since the initial release a lot has happened in my personal life. And although I could support the app for a number of years after, that is no longer the case. It is not a lack of interest, but a lack of time. I hope that by releasing the code, someone else can pick up where I left.
