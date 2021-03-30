@@ -22,9 +22,12 @@ class EventCloner extends EventProcessor {
 	private final CloneIdIndex mValidClones = new CloneIdIndex();
 	private final CloneIndex mExistingClones;
 
+	protected Period mSrcSingleEventWindow0 = new Period(new DateTime().withTime(0, 0, 0, 0),
+		new DateTime().plusDays(1).withTime(0, 0, 0, 0));
 	protected Period mSrcSingleEventWindow = new Period(new DateTime().minusDays(1).withTime(0, 0, 0, 0),
-			new DateTime().plusDays(1).withTime(0, 0, 0, 0));
-
+		new DateTime().plusDays(1).withTime(0, 0, 0, 0));
+	
+		
 	protected static final int RESULT_EVENT_UNCHANGED = -1;
 	protected static final int RESULT_EVENT_INSERTED = -2;
 	protected static final int RESULT_EVENT_UPDATED = -3;
@@ -91,6 +94,7 @@ class EventCloner extends EventProcessor {
 		if (event.isSingleEvent()) {
 			// Merge source single event window with event's window
 			mSrcSingleEventWindow.merge(event.getPeriod());
+			mSrcSingleEventWindow0.merge(event.getPeriod());
 		}
 		// Add clone id to list of valid clone ids
 		mValidClones.add(event, cloneId);
@@ -678,16 +682,22 @@ class EventCloner extends EventProcessor {
 				// overlapped with the event window too and therefore should
 				// have existed.
 				return clonePeriod.overlaps(mSrcSingleEventWindow);
-			}
-
-			// For single events, we check if they start before or end after the
-			// event window
-			return !clonePeriod.startsBeforeStartOf(mSrcSingleEventWindow)
-					&& !clonePeriod.endsAfterEndOf(mSrcSingleEventWindow);
-		}
-
+			} //else {
+			
+			// For single events, we check if they start before or end after the event window
+//TODO: alter or add condition for future events within sync period whose sources is deleted
+				if (mRule.getSyncPeriodBefore() != 0) {
+					return !clonePeriod.startsBeforeStartOf(mSrcSingleEventWindow)
+							&& !clonePeriod.endsAfterEndOf(mSrcSingleEventWindow);
+				} else {
+					return !clonePeriod.startsBeforeStartOf(mSrcSingleEventWindow0)
+							&& !clonePeriod.endsAfterEndOf(mSrcSingleEventWindow);
+				}
+			//}
 		// Valid clone that we don't need to retain
-		return true;
+		} else {
+			return true;
+		}
 	}
 
 	@Override

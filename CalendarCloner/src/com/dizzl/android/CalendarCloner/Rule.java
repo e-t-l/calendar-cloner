@@ -39,7 +39,7 @@ public class Rule {
 
 	private final static long ONE_DAY = 24L * 3600 * 1000;
 	private final static long MAX_AGGREGATE_RULE_PERIOD = 365 * ONE_DAY;
-	public final static long SYNC_PERIODS[] = { 0, ONE_DAY, 3 * ONE_DAY, 7 * ONE_DAY, 14 * ONE_DAY, 30 * ONE_DAY,
+	public final static long SYNC_PERIODS[] = { 0L, ONE_DAY, 3 * ONE_DAY, 7 * ONE_DAY, 14 * ONE_DAY, 30 * ONE_DAY,
 			90 * ONE_DAY, MAX_AGGREGATE_RULE_PERIOD, 2 * 365 * ONE_DAY, 5 * 365 * ONE_DAY, Utilities.INFINITY_MILLIS, };
 
 	// Dummy domains

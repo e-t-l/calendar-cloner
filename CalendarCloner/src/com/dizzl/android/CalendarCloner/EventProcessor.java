@@ -287,9 +287,11 @@ public class EventProcessor extends Processor {
 
 		// Save current time for event period selection
 		DateTime periodStart = new DateTime().minus(
-				mRule.getSyncPeriodBefore() != 0 ? mRule.getSyncPeriodBefore() : INFINITY).withTime(0, 0, 0, 0);
+//				mRule.getSyncPeriodBefore() != 0 ? mRule.getSyncPeriodBefore() : INFINITY).withTime(0, 0, 0, 0);
+				mRule.getSyncPeriodBefore()).withTime(0, 0, 0, 0);
 		DateTime periodEnd = new DateTime()
-				.plus(mRule.getSyncPeriodAfter() != 0 ? mRule.getSyncPeriodAfter() : INFINITY).plusDays(1)
+//				.plus(mRule.getSyncPeriodAfter() != 0 ? mRule.getSyncPeriodAfter() : INFINITY).plusDays(1)
+				.plus(mRule.getSyncPeriodAfter()).plusDays(1)
 				.withTime(0, 0, 0, 0);
 		mSyncPeriod = new Period(periodStart, periodEnd);
 

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dizzl.android.CalendarCloner"
-    android:versionCode="51"
-    android:versionName="3.88" >
+    android:versionCode="52"
+    android:versionName="3.88.1" >
 
     <uses-sdk
         android:minSdkVersion="15"
