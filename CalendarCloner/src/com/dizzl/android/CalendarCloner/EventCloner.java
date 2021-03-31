@@ -685,7 +685,7 @@ class EventCloner extends EventProcessor {
 			} //else {
 			
 			// For single events, we check if they start before or end after the event window
-//TODO: alter or add condition for future events within sync period whose sources is deleted
+//TODO alter or add condition for future events within sync period whose sources is deleted
 				if (mRule.getSyncPeriodBefore() != 0) {
 					return !clonePeriod.startsBeforeStartOf(mSrcSingleEventWindow)
 							&& !clonePeriod.endsAfterEndOf(mSrcSingleEventWindow);
