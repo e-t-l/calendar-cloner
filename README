@@ -1,13 +1,11 @@
-This repo contains the source code of Calendar Cloner and Calendar Cloner FREE, both Android apps that can be found in Google Play.
-
-Since the initial release a lot has happened in my personal life. And although I could support the app for a number of years after, that is no longer the case. It is not a lack of interest, but a lack of time. I hope that by releasing the code, someone else can pick up where I left.
-
-With regards to the code itself, please be forgiving to what I produced. It works perfectly in many cases, but the code structure can be much improved. This was my first big(ger) Java project so back then I still had a lot to learn.
-
-If someone has any questions regarding it, feel free to contact me.
-
-And as always, happy cloning.
-
-Cheers
-  Jeroen
+This is the first real coding project I've worked on (even though I didn't write 99.9% of it). It's certainly the biggest project I've worked on, and I'm using it as a playground to learn how an app is written in Java, and too make tweaks to the CalendarCloner app that suit my needs. In the unlikely event that someone stumbles across this repo, feel free to contribute!
+Original dev's README below.
+  
+  This repo contains the source code of Calendar Cloner and Calendar Cloner FREE, both Android apps that can be found in Google Play.
+  Since the initial release a lot has happened in my personal life. And although I could support the app for a number of years after, that is no longer the case. It is not a lack of interest, but a lack of time. I hope that by releasing the code, someone else can pick up where I left.
+  With regards to the code itself, please be forgiving to what I produced. It works perfectly in many cases, but the code structure can be much improved. This was my first big(ger) Java project so back then I still had a lot to learn.
+  If someone has any questions regarding it, feel free to contact me.
+  And as always, happy cloning.
+  Cheers
+    Jeroen
 
