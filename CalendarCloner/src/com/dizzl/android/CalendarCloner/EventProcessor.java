@@ -285,7 +285,7 @@ public class EventProcessor extends Processor {
 					new String[] { ClonerApp.translate(R.string.calendar_destination) }), result.getUpdateCount());
 		}
 
-		// Save current time for the event period selection
+		// Save current time for event period selection
 		DateTime periodStart = new DateTime().minus(
 //				mRule.getSyncPeriodBefore() != 0 ? mRule.getSyncPeriodBefore() : INFINITY).withTime(0, 0, 0, 0);
 				mRule.getSyncPeriodBefore()).withTime(0, 0, 0, 0);

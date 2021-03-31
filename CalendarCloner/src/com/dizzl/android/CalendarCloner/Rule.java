@@ -575,7 +575,7 @@ public class Rule {
 		mReadOnly = readOnly;
 	}
 
-//TODO: Can this be called from elsewhere?
+//TODO Can this be called from elsewhere?
 	public boolean setSyncPeriodBefore(long periodBefore) {
 		mSyncPeriodBefore = Utilities.getSelectionFromArray(SYNC_PERIODS, periodBefore, SYNC_PERIODS[0]);
 		this.validateConsistency();
